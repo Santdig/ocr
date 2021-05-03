@@ -19,12 +19,12 @@
         <div id="video_overlay"></div>
       </div>
       <div id="gui_controls">
-        <!--<button
+        <button
           id="switchCameraButton"
           name="switch Camera"
           type="button"
           aria-pressed="false"
-        ></button>-->
+        ></button>
         <button id="takePhotoButton" name="take Photo" type="button">Read</button>
         <button
           id="toggleFullScreenButton"
@@ -38,5 +38,11 @@
     <script src="js/screenfull.min.js"></script>
     <script src="js/howler.core.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+    var x = document.getElementById("switchCameraButton");
+    x.style.display = "none";
+    </script>
+
   </body>
 </html>
