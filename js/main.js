@@ -65,7 +65,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
         });
 
         deviceCount().then(function (deviceCount) {
-          amountOfCameras = deviceCount;
+          /*amountOfCameras = deviceCount;*/
+          amountOfCameras = 0;
 
           // init the UI and the camera stream
           initCameraUI();
