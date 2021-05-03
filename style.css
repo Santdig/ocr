@@ -47,8 +47,8 @@ body {
 
 #canvas {
     display: none;
-    width: 600;
-    height: 500;
+    width: 80%;
+    height: 80%;
 }
 
 .output {
