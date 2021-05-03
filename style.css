@@ -17,6 +17,53 @@ body {
   z-index: 0;
 }
 
+/*#log {
+  display: none;
+}*/
+
+.newcontent {
+  /*position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;*/
+
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+
+  display: none;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  /*width: 50%;
+  height: 50%;*/
+}
+
+#canvas {
+    display: none;
+}
+
+.output {
+    width: 340px;
+    display: inline-block;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
 #gui_controls {
   position: fixed;
   background-color: #111; /*rgba(255, 0, 0, 0.5);*/
@@ -68,6 +115,7 @@ button {
   top: calc(50% - 40px);
   width: 64px;
   height: 64px;
+  background-image: url('img/ic_photo_camera_white_48px.svg');
 
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
