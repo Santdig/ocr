@@ -47,6 +47,8 @@ body {
 
 #canvas {
     display: none;
+    width: 600;
+    height: 500;
 }
 
 .output {
