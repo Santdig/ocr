@@ -14,10 +14,28 @@
   </head>
   <body>
     <div id="container">
+
       <div id="vid_container">
         <video id="video" autoplay playsinline></video>
         <div id="video_overlay"></div>
       </div>
+
+      <div class="newcontent" id="newcontent">
+        <canvas id="canvas"></canvas>
+        <div class="output">
+            <!--<img id="photo" alt="The screen capture will appear in this box.">-->
+            <!--<img id="photo">-->
+        </div>
+        <!--<h1>Heading</h1>
+        <p>Your output text will be displayed here...</p>
+        <button id="myBtn" onclick="myFunction()">Pause</button>-->
+      </div>
+
+      <!--<div id="log">
+        <p>Santosh Dighe</p>
+        <span>Your output text will be displayed here...</span>
+      </div>-->
+
       <div id="gui_controls">
         <button
           id="switchCameraButton"
@@ -25,7 +43,7 @@
           type="button"
           aria-pressed="false"
         ></button>
-        <button id="takePhotoButton" name="take Photo" type="button">Read</button>
+        <button id="takePhotoButton" name="take Photo" type="button"></button>
         <button
           id="toggleFullScreenButton"
           name="toggle FullScreen"
@@ -38,11 +56,9 @@
     <script src="js/screenfull.min.js"></script>
     <script src="js/howler.core.min.js"></script>
     <script src="js/main.js"></script>
-
     <!--<script>
     var x = document.getElementById("switchCameraButton");
     x.style.display = "none";
     </script>-->
-
   </body>
 </html>
