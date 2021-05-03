@@ -15,6 +15,9 @@ var switchCameraButton;
 var amountOfCameras = 0;
 var currentFacingMode = 'environment';
 
+var canvas = null;
+var photo = null;
+
 // this function counts the amount of video inputs
 // it replaces DetectRTC that was previously implemented.
 function deviceCount() {
@@ -91,14 +94,30 @@ document.addEventListener('DOMContentLoaded', function (event) {
 function initCameraUI() {
   video = document.getElementById('video');
 
+  log = document.getElementById('log');
+  newcontent = document.getElementById('newcontent');
+  videoc = document.getElementById('vid_container');
+
   takePhotoButton = document.getElementById('takePhotoButton');
   toggleFullScreenButton = document.getElementById('toggleFullScreenButton');
   switchCameraButton = document.getElementById('switchCameraButton');
+
+  canvas = document.getElementById('canvas');
+  photo = document.getElementById('photo');
 
   // https://developer.mozilla.org/nl/docs/Web/HTML/Element/button
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
   takePhotoButton.addEventListener('click', function () {
+    /*video.style.display = 'none';
+    overlay.style.display = 'none';
+    videoc.style.display = 'none';
+    video.innerHTML = "Santosh Dighe"
+    videoc.removeChild(input.parentNode);*/
+
+    videoc.style.display = 'none';
+    newcontent.style.display = 'block';
+    canvas.style.display = 'block';
     takeSnapshotUI();
     takeSnapshot();
   });
@@ -232,13 +251,17 @@ function initCameraStream() {
 
 function takeSnapshot() {
   // if you'd like to show the canvas add it to the DOM
-  var canvas = document.createElement('canvas');
+
+  /*var canvas = document.createElement('canvas');*/
 
   var width = video.videoWidth;
   var height = video.videoHeight;
 
   canvas.width = width;
   canvas.height = height;
+
+  /*canvas.width = 320;
+  canvas.height = 320;*/
 
   context = canvas.getContext('2d');
   context.drawImage(video, 0, 0, width, height);
