@@ -38,7 +38,7 @@ body {
   background-color: #111;
 }
 
-/*  Button style from: 
+/*  Button style from:
     https://googlesamples.github.io/web-fundamentals/fundamentals/media/mobile-web-video-playback.html */
 
 button {
@@ -62,7 +62,7 @@ button {
   top: calc(50% - 40px);
   width: 80px;
   height: 80px;
-  background-image: url('img/ic_photo_camera_white_48px.svg');
+  /*background-image: url('img/ic_photo_camera_white_48px.svg');*/
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -100,7 +100,7 @@ button {
 @media screen and (orientation: portrait) {
   /* portrait-specific styles */
 
-  /* video_container (video) doesn't respect height... 
+  /* video_container (video) doesn't respect height...
        so we will fill it in completely in portrait mode
     */
   #vid_container {
