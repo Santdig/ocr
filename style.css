@@ -38,6 +38,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
@@ -55,6 +56,31 @@ body {
     width: 340px;
     display: inline-block;
 }
+
+#log > div {
+  color: #313131;
+  border-top: 1px solid #dadada;
+  padding: 9px;
+  display: flex;
+}
+#log > div:first-child {
+  border: 0;
+}
+.status {
+  min-width: 250px;
+}
+#log {
+  border: 1px solid #dadada;
+  padding: 10px;
+  min-height: 200px;
+}
+#log pre {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ }
 
 #myBtn {
   width: 200px;
