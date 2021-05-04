@@ -378,5 +378,10 @@ function progressUpdate(packet){
 		}
 
 		log.insertBefore(line, log.firstChild)
+
+    var txt = document.getElementById("log").textContent;
+    var msg = new SpeechSynthesisUtterance(txt);
+    window.speechSynthesis.speak(msg);
+
 	}
 }
