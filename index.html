@@ -4,6 +4,7 @@
     <meta
       name="viewport"
       content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     />
     <meta
       name="description"
@@ -22,7 +23,7 @@
 
       <div class="newcontent" id="newcontent">
         <canvas id="canvas"></canvas>
-        <div class="output">
+        <div id="log" class="log">
             <!--<img id="photo" alt="The screen capture will appear in this box.">-->
             <!--<img id="photo">-->
         </div>
@@ -44,6 +45,7 @@
           aria-pressed="false"
         ></button>
         <button id="takePhotoButton" name="take Photo" type="button"></button>
+        <!--<button id="readButton" name="read text" type="button"></button>-->
         <button
           id="toggleFullScreenButton"
           name="toggle FullScreen"
@@ -56,6 +58,11 @@
     <script src="js/screenfull.min.js"></script>
     <script src="js/howler.core.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+    <script src='js/tesseract.min.js'></script>
+
     <!--<script>
     var x = document.getElementById("switchCameraButton");
     x.style.display = "none";
