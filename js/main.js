@@ -105,6 +105,8 @@ function initCameraUI() {
   canvas = document.getElementById('canvas');
   photo = document.getElementById('photo');
 
+  log.style.display = 'none';
+
   // https://developer.mozilla.org/nl/docs/Web/HTML/Element/button
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
@@ -117,7 +119,9 @@ function initCameraUI() {
 
     videoc.style.display = 'none';
     newcontent.style.display = 'block';
-    canvas.style.display = 'block';
+    //canvas.style.display = 'block';
+    canvas.style.display = 'none';
+    //log.style.display = 'none';
     takeSnapshotUI();
     takeSnapshot();
   });
@@ -394,9 +398,26 @@ function progressUpdate(packet){
 
 		log.insertBefore(line, log.firstChild)
 
-    var txt = document.getElementById("log").textContent;
-    var msg = new SpeechSynthesisUtterance(txt);
-    window.speechSynthesis.speak(msg);
+    log.style.display = 'block'
+
+    //var txt = document.getElementById("log").textContent;
+
+    var txt = "Your ego is your false self-image created by thoughts. It's your social mask, one that constantly requires validation because it lives in fear of losing its sense of identity. When you are upset because someone doesn't like you, it's your ego operating: you validate your existence based on their approval. When they disapprove of you, you no longer feel good about who you are.";
+
+    //var msg = new SpeechSynthesisUtterance(txt);
+    //window.speechSynthesis.speak(msg);
+
+		let speech = new SpeechSynthesisUtterance();
+		speech.text = txt
+		//speech.lang = "en";
+		speech.lang =$("#langsel").val();
+		voices = window.speechSynthesis.getVoices();
+		speech.voice = voices[20];
+		//speech.voice = 'hi-IN';
+		speech.rate = '1';
+		//speech.volume = volume;
+		speech.pitch = '1';
+		window.speechSynthesis.speak(speech);
 
 	}
 }
