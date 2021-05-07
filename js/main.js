@@ -281,8 +281,23 @@ function takeSnapshot() {
   // some API's (like Azure Custom Vision) need a blob with image data
   getCanvasBlob(canvas).then(function (blob) {
     // do something with the image blob
+
     var jpegFile = canvas.toDataURL("image/jpeg");
     recognizeFile(jpegFile)
+
+    //var canvas = document.createElement("canvas");
+    //context = canv.getContext('2d');
+
+    /*var canvas1 = document.getElementById('canvas');
+    context1 = canvas1.getContext('2d');
+    base_image = new Image();
+    base_image.src = 'img/computer-vision.jpg';
+    base_image.onload = function(){
+      context1.drawImage(base_image, 0, 0, width, height);
+    }
+    var imgurl = canvas1.toDataURL("image/jpeg");
+    recognizeFile(imgurl)*/
+
   });
 }
 
